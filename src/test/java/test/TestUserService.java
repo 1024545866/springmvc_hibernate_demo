@@ -1,6 +1,7 @@
 package test;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import org.andy.work.entity.AcctUser;
@@ -39,6 +40,16 @@ public class TestUserService {
     acctUser.setTelephone("13022221111");
     String id = userService.save(acctUser);
     LOGGER.info(JSON.toJSONString(id));
+  }
+  
+  
+  @Test
+  public void findAll(){
+    
+   List<AcctUser> list = userService.findAll();
+   
+    LOGGER.info(JSON.toJSON(list));
+    
   }
 
 }
