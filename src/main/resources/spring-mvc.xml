@@ -28,10 +28,6 @@
 			</bean>
 		</mvc:message-converters>
 	</mvc:annotation-driven>
-	
-	
-	
-	
 
 	<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
 	<bean

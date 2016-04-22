@@ -35,7 +35,7 @@ public class UserDaoImpl implements UserDao {
   @SuppressWarnings("unchecked")
   @Override
   public List<AcctUser> findAll() {
-    List<AcctUser> acctUsers = this.getCurrentSession().createQuery("from AcctUser").setCacheable(true).list();
+    List<AcctUser> acctUsers = this.getCurrentSession().createQuery("from AcctUser").list();
     return acctUsers;
   }
 

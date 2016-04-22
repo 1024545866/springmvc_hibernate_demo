@@ -38,7 +38,7 @@ public class AcctUser implements java.io.Serializable {
   private String nickName;
   private String telephone;
   private Date registerTime;
-  private Set<AcctRole> acctRoles = new HashSet<AcctRole>(0);
+//  private Set<AcctRole> acctRoles = new HashSet<AcctRole>(0);
 
   public AcctUser() {
 
@@ -55,7 +55,7 @@ public class AcctUser implements java.io.Serializable {
     this.nickName = nickName;
     this.telephone = telephone;
     this.registerTime = registerTime;
-    this.acctRoles = acctRoles;
+//    this.acctRoles = acctRoles;
   }
 
   @Id
@@ -96,16 +96,16 @@ public class AcctUser implements java.io.Serializable {
     this.registerTime = registerTime;
   }
 
-  @JsonIgnoreProperties(value={"acctUsers", "acctAuthorities"})
-  @ManyToMany(fetch = FetchType.LAZY)
-  @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-  @JoinTable(name = "acct_user_role", catalog = "work", joinColumns = { @JoinColumn(name = "user_id", nullable = false, updatable = false) }, inverseJoinColumns = { @JoinColumn(name = "role_id", nullable = false, updatable = false) })
-  public Set<AcctRole> getAcctRoles() {
-    return this.acctRoles;
-  }
-
-  public void setAcctRoles(Set<AcctRole> acctRoles) {
-    this.acctRoles = acctRoles;
-  }
+//  @JsonIgnoreProperties(value={"acctUsers", "acctAuthorities"})
+//  @ManyToMany(fetch = FetchType.LAZY)
+//  @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+//  @JoinTable(name = "acct_user_role", catalog = "work", joinColumns = { @JoinColumn(name = "user_id", nullable = false, updatable = false) }, inverseJoinColumns = { @JoinColumn(name = "role_id", nullable = false, updatable = false) })
+//  public Set<AcctRole> getAcctRoles() {
+//    return this.acctRoles;
+//  }
+//
+//  public void setAcctRoles(Set<AcctRole> acctRoles) {
+//    this.acctRoles = acctRoles;
+//  }
 
 }
